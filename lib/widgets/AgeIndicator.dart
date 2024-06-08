@@ -5,9 +5,14 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_03_06_24/utils/helpers.dart';
 
 class Ageindicator extends StatelessWidget {
-  final Color textColor;
+  late Color textColor;
 
-  const Ageindicator(this.textColor);
+  Ageindicator.Blue() {
+    this.textColor = Colors.blue;
+  }
+  Ageindicator.White() {
+    this.textColor = Colors.white;
+  }
 
   @override
   Widget build(BuildContext context) {

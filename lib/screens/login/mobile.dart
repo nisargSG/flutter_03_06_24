@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_03_06_24/widgets/AgeIndicator.dart';
 
-class Screen2 extends StatelessWidget {
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Align(
-        alignment: Alignment.bottomCenter,
-        child: Ageindicator(Colors.white),
+        alignment: Alignment.topRight,
+        child: Ageindicator.Blue(),
       ),
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.amber,
     );
   }
 }
