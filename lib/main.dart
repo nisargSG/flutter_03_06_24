@@ -5,6 +5,6 @@ import 'package:flutter_03_06_24/utils/helpers.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: getWidget(m.Login(), d.Login()),
+    home: getWidget(mobileWidget: m.Login()),
   ));
 }

@@ -8,11 +8,13 @@ String getAge() {
   return (currentDate.year - birthDate.year).toString();
 }
 
-Widget getWidget(Widget widgetMobile, Widget widgetDesktop) {
-  var width = ui.window.physicalSize.width / ui.window.devicePixelRatio;
-  if (width > 600) {
-    return widgetDesktop;
-  } else {
-    return widgetMobile;
-  }
+//w1                            //null
+Widget getWidget({required Widget mobileWidget, Widget? desktopWidget}) {
+  return LayoutBuilder(
+    builder: (_, constraints) {
+      return constraints.maxWidth <= 600
+          ? mobileWidget
+          : desktopWidget ?? mobileWidget;
+    },
+  );
 }
